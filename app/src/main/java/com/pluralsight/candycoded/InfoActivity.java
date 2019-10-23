@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.view.View;
 
 import com.squareup.picasso.Picasso;
 
@@ -31,9 +32,9 @@ public class InfoActivity extends AppCompatActivity {
         Uri uri  = Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801");
         Intent mapIntent  = new Intent(Intent.ACTION_VIEW, uri);
         mapIntent.setPackage("com.google.android.apps.maps");
-        if (mapIntent.resolveActivity(getPackageManager())!=null)
+        if (mapIntent.resolveActivity(getPackageManager())!=null){
             startActivity(mapIntent);
-
+        }
 
 
     }
